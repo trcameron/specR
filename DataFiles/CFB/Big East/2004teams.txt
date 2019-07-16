@@ -1,0 +1,7 @@
+   1, Boston_College
+   2, Connecticut
+   3, Pittsburgh
+   4, Rutgers
+   5, Syracuse
+   6, Temple
+   7, West_Virginia

@@ -1,0 +1,8 @@
+   1, Cincinnati
+   2, Connecticut
+   3, Louisville
+   4, Pittsburgh
+   5, Rutgers
+   6, South_Florida
+   7, Syracuse
+   8, Temple

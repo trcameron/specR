@@ -1,0 +1,11 @@
+   1, Clemson
+   2, Duke
+   3, Florida_St
+   4, Georgia_Tech
+   5, Maryland
+   6, Miami_FL
+   7, NC_State
+   8, North_Carolina
+   9, Virginia
+  10, Virginia_Tech
+  11, Wake_Forest

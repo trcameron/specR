@@ -1,0 +1,8 @@
+   1, Boston_College
+   2, Miami_FL
+   3, Pittsburgh
+   4, Rutgers
+   5, Syracuse
+   6, Temple
+   7, Virginia_Tech
+   8, West_Virginia

@@ -1,0 +1,14 @@
+   1, Boston_College
+   2, Clemson
+   3, Duke
+   4, Florida_St
+   5, Georgia_Tech
+   6, Louisville
+   7, Miami_FL
+   8, NC_State
+   9, North_Carolina
+  10, Pittsburgh
+  11, Syracuse
+  12, Virginia
+  13, Virginia_Tech
+  14, Wake_Forest

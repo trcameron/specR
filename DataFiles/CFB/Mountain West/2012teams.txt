@@ -1,0 +1,10 @@
+   1, Air_Force
+   2, Boise_St
+   3, Colorado_St
+   4, Fresno_St
+   5, Hawaii
+   6, Nevada
+   7, New_Mexico
+   8, San_Diego_St
+   9, UNLV
+  10, Wyoming

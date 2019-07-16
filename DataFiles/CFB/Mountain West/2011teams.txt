@@ -1,0 +1,8 @@
+   1, Air_Force
+   2, Boise_St
+   3, Colorado_St
+   4, New_Mexico
+   5, San_Diego_St
+   6, TCU
+   7, UNLV
+   8, Wyoming
