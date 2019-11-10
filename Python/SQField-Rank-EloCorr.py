@@ -2,7 +2,7 @@
 #
 # Author: Thomas R. Cameron
 # Date: 11/1/2019
-from rankability import SDR
+from rankability import specR
 from copy import deepcopy
 import numpy as np
 from scipy.stats import pearsonr, spearmanr, kendalltau
@@ -84,7 +84,7 @@ def sqfieldData(year,opt):
                     adj[k][i,j] = matches[k][i,j]/total
                     adj[k][j,i] = matches[k][j,i]/total
         # Rankability
-        rankability.append(SDR(adj[k]))
+        rankability.append(specR(adj[k]))
         # Elo Correlation
         if(k>=1 and opt=="SR"):
             corr,pval = spearmanr(elo_rating[k],elo_rating[k-1])
@@ -122,8 +122,8 @@ def main():
         f2.write(',%.4f,%.4f\n' % (x[-1],y[-1]))
     # correlation between year summary data
     corr,pval = spearmanr(x,y)
-    print('\tSDR and EloCorr corr = %.4f' % corr)
-    print('\tSDR and EloCorr pval = %.4f' % pval)
+    print('\tspecR and EloCorr corr = %.4f' % corr)
+    print('\tspecR and EloCorr pval = %.4f' % pval)
     # close files
     f1.close()
     f2.close()

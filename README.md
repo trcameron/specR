@@ -12,4 +12,4 @@ Data and Python source code supplement for the article "On the Graph Laplacian a
     * [Email: hcsmith@davidson.edu](mailto:hcsmith@davidson.edu)
 	
 ## Instructions
-Both the chess and college football data sets are locatad in the DataFiles directory. All Python source code for running the rankability measure is located in the Python directory. In addition, tests for the Sinquefield Cup and college football are located in the Python directory. All result files are written in the DataFiles/PythonResults directory.
+Both the chess and college football data sets are locatad in the DataFiles directory. All Python source code for running the rankability measure is in the rankability.py file in the Python directory. In addition, tests for the Sinquefield Cup and College Football are located in the Python directory. All result files are written in the DataFiles/PythonResults directory.

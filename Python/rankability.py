@@ -7,7 +7,7 @@
 # spectral-degree characterization of the graph Laplacian of a complete dominance graph.
 #
 # Author: Thomas R. Cameron
-# Date: 7/16/2019
+# Date: 11/1/2019
 import numpy as np
 import itertools
 from math import factorial
@@ -24,11 +24,11 @@ def Hausdorff(e,s):
     # Hausdorff distance
     return max(_sv(e,s),_sv(s,e))
 ###############################################
-###             SDR                         ###
+###             specR                       ###
 ###############################################
 #   Computes Spectral-Degree Rankability Measure.
 ###############################################
-def SDR(a):
+def specR(a):
     # given graph Laplacian
     n = len(a)
     x = np.array([np.sum(a[i,:]) for i in range(n)])
@@ -41,11 +41,11 @@ def SDR(a):
     # rankability measure
     return 1. - ((Hausdorff(e,s)+Hausdorff(x,s))/(2*(n-1)))
 ###############################################
-###             IPR                         ###
+###             edgeR                       ###
 ###############################################
-#   Computes Integer-Program Rankability Measure using brute force approach.
+#   Computes edge Rankability Measure using brute force approach.
 ###############################################
-def IPR(a):
+def edgeR(a):
     # size
     n = len(a)
     # complete dominance
@@ -82,19 +82,19 @@ def main():
     er = []
     sr = []
     for k in range(len(adj)):
-        er.append(IPR(adj[k]))
-        sr.append(SDR(adj[k]))
+        er.append(edgeR(adj[k]))
+        sr.append(specR(adj[k]))
     corr,pval = spearmanr(er,sr)
-    print('SIMOD Digraph Examples: ')
-    print('IPR = [%.4f' % er[0], end='')
+    print('Anderson et al. Digraph Examples: ')
+    print('edgeR = [%.4f' % er[0], end='')
     for k in range(len(er)):
         print(', %.4f' % er[k], end='')
     print(']')
-    print('SDR = [%.4f' % sr[0], end='')
+    print('specR = [%.4f' % sr[0], end='')
     for k in range(len(sr)):
         print(', %.4f' % sr[k], end='')
     print(']')
-    print('IPR and SDR corr = %.4f' % corr)
-    print('IPR and SDR pval = %.4f' % pval)
+    print('edgeR and specR corr = %.4f' % corr)
+    print('edgeR and specR pval = %.4f' % pval)
 if __name__ == '__main__':
     main()

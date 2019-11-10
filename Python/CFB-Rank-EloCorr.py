@@ -2,7 +2,7 @@
 #
 # Author: Thomas R. Cameron
 # Date: 11/1/2019
-from rankability import SDR
+from rankability import specR
 from copy import deepcopy
 import numpy as np
 from scipy.stats import pearsonr, spearmanr, kendalltau
@@ -86,7 +86,7 @@ def cfbData(conf,year,opt):
                         adj[-1][i,j] = matches[-1][i,j]/total
                         adj[-1][j,i] = matches[-1][j,i]/total
             # Rankability
-            rankability.append(SDR(adj[-1]))
+            rankability.append(specR(adj[-1]))
             # Elo Correlation
             if(len(elo_rating)>1 and opt=="SR"):
                 corr,pval = spearmanr(elo_rating[-1],elo_rating[-2])
@@ -111,7 +111,7 @@ def cfbData(conf,year,opt):
                         adj[-1][i,j] = matches[-1][i,j]/total
                         adj[-1][j,i] = matches[-1][j,i]/total
             # Rankability
-            rankability.append(SDR(adj[-1]))
+            rankability.append(specR(adj[-1]))
             # Elo Correlation
             if(len(elo_rating)>1 and opt=="SR"):
                 corr,pval = spearmanr(elo_rating[-1],elo_rating[-2])
@@ -193,11 +193,11 @@ def main():
     # correlation between year summary data
     print('Atlantic Coast: ')
     corr,pval = spearmanr(x,y)
-    print('\tSDR and EloCorr corr = %.4f' % corr)
-    print('\tSDR and EloCorr pval = %.4f' % pval)
+    print('\tspecR and EloCorr corr = %.4f' % corr)
+    print('\tspecR and EloCorr pval = %.4f' % pval)
     corr,pval = spearmanr(x,z)
-    print('\tSDR and EloPred corr = %.4f' % corr)
-    print('\tSDR and EloPred pval = %.4f' % pval)
+    print('\tspecR and EloPred corr = %.4f' % corr)
+    print('\tspecR and EloPred pval = %.4f' % pval)
     # Big East round by round analysis and summary
     f1.write('Big East, Year, Round, Rankability, EloCorr\n')
     f2.write('Big East, Year, Rankability, EloCorr, EloPred\n')
@@ -218,11 +218,11 @@ def main():
     # correlation between year summary data
     print('Big East: ')
     corr,pval = spearmanr(x,y)
-    print('\tSDR and EloCorr corr = %.4f' % corr)
-    print('\tSDR and EloCorr pval = %.4f' % pval)
+    print('\tspecR and EloCorr corr = %.4f' % corr)
+    print('\tspecR and EloCorr pval = %.4f' % pval)
     corr,pval = spearmanr(x,z)
-    print('\tSDR and EloPred corr = %.4f' % corr)
-    print('\tSDR and EloPred pval = %.4f' % pval)
+    print('\tspecR and EloPred corr = %.4f' % corr)
+    print('\tspecR and EloPred pval = %.4f' % pval)
     # Mountain West round by round analysis and summary
     f1.write('Mountain West, Year, Round, Rankability, EloCorr\n')
     f2.write('Mountain West, Year, Rankability, EloCorr, EloPred\n')
@@ -243,11 +243,11 @@ def main():
     # correlation between year summary data
     print('Mountain West: ')
     corr,pval = spearmanr(x,y)
-    print('\tSDR and EloCorr corr = %.4f' % corr)
-    print('\tSDR and EloCorr pval = %.4f' % pval)
+    print('\tspecR and EloCorr corr = %.4f' % corr)
+    print('\tspecR and EloCorr pval = %.4f' % pval)
     corr,pval = spearmanr(x,z)
-    print('\tSDR and EloPred corr = %.4f' % corr)
-    print('\tSDR and EloPred pval = %.4f' % pval)
+    print('\tspecR and EloPred corr = %.4f' % corr)
+    print('\tspecR and EloPred pval = %.4f' % pval)
     # close files
     f1.close()
     f2.close()
